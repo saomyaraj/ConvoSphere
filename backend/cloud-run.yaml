@@ -1,0 +1,26 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: convosphere-backend
+spec:
+  template:
+    spec:
+      containers:
+        - image: gcr.io/convosphere-app/convosphere-backend
+          ports:
+            - containerPort: 5000
+          env:
+            - name: NODE_ENV
+              value: "production"
+            - name: PORT
+              value: "5000"
+            - name: MONGO_URI
+              value: "mongodb+srv://saomyarajdev:abcd1234@convosphere.sznvqy0.mongodb.net/?retryWrites=true&w=majority&appName=ConvoSphere"
+            - name: JWT_SECRET
+              value: "aBcD3fGhIjKlMnOpQrStUvWxYz1234567890!@$%^&*"
+            - name: CORS_ORIGIN
+              value: "https://chatconvosphere.vercel.app"
+          resources:
+            limits:
+              cpu: "1"
+              memory: "512Mi"

@@ -1,0 +1,16 @@
+{
+    "name": "convosphere",
+    "version": "1.0.0",
+    "description": "ConvoSphere - Real-time Chat Application",
+    "main": "backend/server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node backend/server.js",
+        "build": "cd backend && npm install"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "author": "Saomyaraj",
+    "license": "ISC"
+}

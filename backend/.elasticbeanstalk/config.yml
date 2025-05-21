@@ -1,0 +1,8 @@
+branch-defaults:
+  main:
+    environment: convosphere-env
+global:
+  application_name: ConvoSphere
+  default_platform: Node.js 18
+  default_region: us-east-1
+  workspace_type: Application
